@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enhanced Sudoku Solver</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="header">
+        <h1>🧩 Sudoku Solver</h1>
+        <p>Advanced Backtracking Algorithm</p>
+      </div>
+    
+      <div class="game-container">
+        <div class="heading">Enter Your Sudoku Puzzle</div>
+        <div class="sudoku-grid" id="sudoku_grid"></div>
+    
+        <div class="buttons">
+          <button class="btn btn-puzzle" id="GetPuzzle">
+            🎲 Get Puzzle
+          </button>
+          <button class="btn btn-solve" id="SolvePuzzle">
+            ⚡ Solve Puzzle
+          </button>
+          <button class="btn btn-validate" id="ValidatePuzzle">
+            ✅ Validate
+          </button>
+        </div>
+    
+        <div class="loading" id="loading">
+          <div class="spinner"></div>
+          <p>Solving puzzle...</p>
+        </div>
+      </div>
+    
+      <div class="notification" id="notification"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
