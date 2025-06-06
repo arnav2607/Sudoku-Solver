@@ -23,9 +23,17 @@ for (let i = 0; i < 9; i++) {
       }
     });
 
+    // Add 3×3 bold borders
+    input.style.border = '1px solid #ccc'; // Default thin border
+    if (i % 3 === 0) input.style.borderTop = '6pt solid black';
+    if (j % 3 === 0) input.style.borderLeft = '6pt solid black';
+    if (i === 8) input.style.borderBottom = '6pt solid black';
+    if (j === 8) input.style.borderRight = '6pt solid black';
+
     grid.appendChild(input);
   }
 }
+
 
 function showNotification(message, type) {
   notification.textContent = message;
@@ -57,6 +65,7 @@ function updateBoardUI() {
           input.style.animation = '';
         }, 600);
       }
+      
     }
   }
 }
