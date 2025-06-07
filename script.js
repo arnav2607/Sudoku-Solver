@@ -69,6 +69,23 @@ function updateBoardUI() {
     }
   }
 }
+function resetBoard() {
+  for (let i = 0; i < 9; i++) {
+    for (let j = 0; j < 9; j++) {
+      const input = document.getElementById(`${i}-${j}`);
+      input.value ="";
+      
+      // Add animation for solved cells
+      if (board[i][j] !== 0) {
+        input.style.animation = 'pulse 0.6s ease';
+        setTimeout(() => {
+          input.style.animation = '';
+        }, 600);
+      }
+      
+    }
+  }
+}
 
 function isValid(board, row, col, num) {
   for (let i = 0; i < 9; i++) {
@@ -150,6 +167,9 @@ document.getElementById('ValidatePuzzle').onclick = function () {
   } else {
     showNotification("❌ Invalid Sudoku board!", "error");
   }
+};
+document.getElementById('ResetPuzzle').onclick = function () {
+  resetBoard();
 };
 
 document.getElementById('GetPuzzle').onclick = function () {
